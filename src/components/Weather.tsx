@@ -1,5 +1,25 @@
+import React, {useState} from "react";
+import axios from "axios";
+
 const Weather = () => {
-    return ( <p>Brr its cold in here!</p> );
+
+    const[city, setCity] = useState('');
+    const[weatherData, setWeatherData] = useState('');
+
+    const fetchWeatherData = async () =>{
+        try{
+            const response = await axios.get(
+                
+            )
+        }
+    }
+
+
+    return ( 
+        <>
+        <p>Hi</p>
+        </>
+     );
 }
  
 export default Weather;
