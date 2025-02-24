@@ -8,3 +8,9 @@
 body {
   background-image: url('/src/assets/pattern.svg');
 }
+
+.container {
+  padding: 16px;
+  background-color: blue;
+  color: white;
+}

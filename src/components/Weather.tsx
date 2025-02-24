@@ -45,7 +45,8 @@ const Weather = () => {
     <button onClick={fetchWeather}>Get Weather</button>
 
     {error && <p>{error}</p>}
-{weather && (
+  
+  {weather && (
     <div className="weather_info">
         <h2>{weather.name}</h2>
         <p>{weather.weather[0].description}</p>
