@@ -30,12 +30,12 @@ body {
 
 .weather_container{
 background-color: rgb(255, 255, 255, 0.6);
-border-radius: 25%;
 padding: 40px;
 }
 
 button {
   padding: 10px;
   font-family: "Rampart One";
-  color: black
+  color: black;
+  background-color: rgb(255, 255, 255, 0.6);
 }

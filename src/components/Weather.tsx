@@ -25,6 +25,7 @@ const Weather = () => {
     setWeather(response.data);
     setError(null)
   } catch (err){
+    console.error("Error fetching weather:", err);
     setError('City not found');
     setWeather(null);
   }
