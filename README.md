@@ -1,50 +1,78 @@
-# React + TypeScript + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is simple weather application built with React, TypeScript, and Axios to fetch real-time weather data from the OpenWeather API.
 
-Currently, two official plugins are available:
+## Features
+- Search for current weather by city name
+- Displays temperature, humidity, and weather conditions
+- Handles errors for invalid city names
+- Responsive design with CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **React**: Component-based UI
+- **TypeScript**: Strongly typed JavaScript
+- **Axios**: HTTP requests to OpenWeather API
+- **Vite**: Development build tool
+- **CSS**: Custom styling
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/weather-app.git
+   cd weather-app
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Create a `.env` file in the root directory and add your OpenWeather API key:
+   ```env
+   VITE_WEATHER_API_KEY=your_api_key_here
+   VITE_WEATHER_URL=https://api.openweathermap.org/data/2.5/weather
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+## Usage
+1. Enter a city name in the search box.
+2. Click the "Get Weather" button.
+3. View the current weather details.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Structure
+```
+weather-app/
+│-- src/
+│   ├── components/
+│   │   ├── Weather.tsx
+│   ├── App.tsx
+│   ├── main.tsx
+│-- public/
+│-- .env
+│-- package.json
+│-- vite.config.ts
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## API Reference
+- **Base URL**: `https://api.openweathermap.org/data/2.5/weather`
+- **Example Request**:
+  ```sh
+  https://api.openweathermap.org/data/2.5/weather?q=London&appid=your_api_key&units=metric
+  ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Troubleshooting
+- **Module Not Found**: Run `npm install` to ensure all dependencies are installed.
+- **Vite Not Starting**: Delete `node_modules` and `package-lock.json`, then reinstall dependencies:
+  ```sh
+  rm -rf node_modules package-lock.json
+  npm install
+  ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Contributing
+Feel free to fork this project and submit pull requests!
+
+## License
+This project is licensed under the MIT License.
+
