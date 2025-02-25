@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+.rampart-one-regular {
+  font-family: "Rampart One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1{
+  font-family: "Rampart One";
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
@@ -10,7 +22,20 @@ body {
 }
 
 .container {
-  padding: 16px;
-  background-color: blue;
-  color: white;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather_container{
+background-color: rgb(255, 255, 255, 0.6);
+border-radius: 25%;
+padding: 40px;
+}
+
+button {
+  padding: 10px;
+  font-family: "Rampart One";
+  color: black
 }

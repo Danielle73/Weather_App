@@ -34,12 +34,15 @@ const Weather = () => {
   return(
     <>
     <div className="container">
-        <h1>Weather App</h1>
+      <div className="weather_container">
+        <h1>Weather forecast</h1>
+        <p>Get today's weather of any city</p>
         <input 
         type="text" 
         placeholder="Enter City"
         value={city}
         onChange={ (e) => setCity(e.target.value)}/>
+    </div>
     </div>
 
     <button onClick={fetchWeather}>Get Weather</button>
